@@ -1,1 +1,1 @@
-{"iv":"c1d2e37224ea1a2d17803d4d06a630f0","key":"secret","algorithm":"stream"}
+{"iv":"5","key":"secret","algorithm":"perm-mix"}

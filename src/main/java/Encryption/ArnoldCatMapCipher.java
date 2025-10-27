@@ -6,20 +6,18 @@ import Utils.KeyUtils;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.security.SecureRandom;
+import java.util.Collections;
 import java.util.Random;
 
 public class ArnoldCatMapCipher implements CipherInterface{
-    private int iterations;
-
-    public ArnoldCatMapCipher() {
-        this.iterations = 30;
-    }
 
     @Override
     public void encrypt(String input, String output, String key, String iv) throws IOException {
         BufferedImage image = ImageUtils.loadImage("imgs/" + input);
 
         int [][][] channels = ImageUtils.imageToChannels(image);
+
+        int iterations = Math.abs((key + iv).hashCode() % 50 + 1);
 
         for (int ch = 0; ch < channels.length; ch++) {
             channels[ch] = applyArnoldCatMap(channels[ch], iterations);
@@ -39,6 +37,8 @@ public class ArnoldCatMapCipher implements CipherInterface{
 
         byte[] transformedBytes = removeSubstitution(imageBytes, key, iv);
         int[][][] channels = ImageUtils.bytesToChannels(transformedBytes);
+
+        int iterations = Math.abs((key + iv).hashCode() % 50 + 1);
 
         for (int ch = 0; ch < channels.length; ch++) {
             channels[ch] = applyInverseArnoldCatMap(channels[ch], iterations);
