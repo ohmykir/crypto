@@ -1,0 +1,13 @@
+Original Entropy: [np.float64(7.998525610347337), np.float64(7.998525610347337), np.float64(7.7182368023781835)]
+Encrypted Entropy: [np.float64(7.999294186523338), np.float64(7.999316688895674), np.float64(7.9993259891404875)]
+H-Correlation (before): [np.float64(0.9999770224067238), np.float64(1.0), np.float64(0.999965512071374)]
+V-Correlation (before): [np.float64(1.0), np.float64(0.9999770224067235), np.float64(0.9999655120713744)]
+D-Correlation (before): [np.float64(0.9999770224067238), np.float64(0.9999770224067238), np.float64(0.9999538653119792)]
+H-Correlation (after): [np.float64(-0.0010560338184641312), np.float64(-9.931466803728347e-05), np.float64(0.00042586657818781176)]
+V-Correlation (after): [np.float64(0.000663619055786846), np.float64(0.0011313889636416121), np.float64(0.0006961861351267386)]
+D-Correlation (after): [np.float64(0.0018504431504542372), np.float64(0.0028323653063174756), np.float64(0.00035788226316908067)]
+NPCR Original-Encrypted: 100.0
+NPCR One Bit Different Key: 100.0
+UACI Original-Encrypted: 32.046197629442396
+UACI One Bit Different Key: 33.452078626046784
+Avalanche: 49.98895327250163
